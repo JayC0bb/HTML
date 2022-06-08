@@ -1,143 +1,211 @@
-
-body {
-  margin: 0;
-  padding: 0;
-  background-image: url('https://images.hdqwalls.com/download/grey-material-design-4k-7l-2560x1440.jpg');
-}
-#logo {
-    overflow-x: hidden;
-    display: inline-block;
-    margin: 15px;
-    float: none;
-    height: 80px;
-    width: 80px;
-    margin-right: 35px;
-  }
-  .navbar {
-    width: 100%;
-    border-bottom: 5px solid rgb(0, 0, 0);
+.sun {
+    max-width: 300px;
+    max-height: 300px;
+    display: block;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
     top: 0;
-    background-color: rgb(175, 174, 174);
-    position: fixed;
-    z-index: 100;
-  }
-
-  nav {
-    float: right;
-    margin-right: 50px;
-  }
-  ul {
-    color: black;
-    font-size: xx-large;
-    display: inline-block;
-  }
-  li {
-    display: inline-block;
-  }
-  a {
-    text-decoration: none;
-    color: black;
-    font-style:initial;
-  }
-  .boxes {
-    margin: auto;
-    width: 100%;
-    height: 700px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-  }
-  .box {
-    background-color: rgb(207, 201, 201);
-    border-radius: 2%;
-    width: 200px;
-    margin: auto;
-    text-align: center;
-    font-size: 40px;
-    font-style:normal;
-    transition: .6s
-  }
-  .box:hover {
-    background-color: rgb(241, 241, 241);
-    transform: scale(1.1);
-    transition: .6s
-  }
-  .podtext {
-    text-decoration: none;
-    font-size: 30px;
-    font-style: italic;
-    text-decoration: underline;
-  }
-  .header {
-    color:rgb(165, 165, 165);
-    text-align: center;
-    text-decoration:underline;
-  }
-  .headerr {
-    color: rgb(214, 214, 214);
-    text-align: center;
-  }
-  @media only screen and (max-width: 768px){
-nav {
-  text-align: center;
-  font-size: 20px;
-  margin-bottom: 50px;
+    bottom: 0;
+    width: 50%;
 }
 
-.box {
-  text-align: center;
-  width: 300px;
-  height: 320px;
-  font-size: 40px;
+.mercury {
+    max-width: 70px;
+    max-height: 70px;
+    display: block;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    animation: spin 15s infinite linear;
 }
+
+.venus {
+    max-width: 100px;
+    max-height: 100px;
+    display: block;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    animation: spin2 13s infinite linear;
+}
+
+.earth {
+    max-width: 250px;
+    max-height: 250px;
+    display: block;
+    width: 50%;
+}
+
+.moon {
+    max-width: 40px;
+    max-height: 40px;
+    display: block;
+    width: 50%;
+    animation: spin_moon  12s infinite linear;
+}
+
+.earthmoon {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: fit-content;
+    height: fit-content;
+    animation: spin3  12s infinite linear;
+}
+
+.mars {
+    max-width: 60px;
+    max-height: 60px;
+    display: block;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    animation: spin4  9s infinite linear;
+}
+
+.jupiter {
+    max-width: 350px;
+    max-height: 350px;
+    display: block;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    animation: spin5  8s infinite linear;
+}
+
+.circle {
+    border: 1px rgb(0, 0, 0) solid;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    background-color: white;
   }
-  .podtext {
-    font-size: 25px;
-  }
-  .boxes {
-    flex-wrap: wrap;
-    row-gap: 50px;
-    margin-top: 250px;
-  }
-  .header {
-    margin-top: 400px;
-    font-size: 20px;
-  }
-  .headerr {
-    font-size: 15px;
-  }
-  .navbar {
+
+.orbit1 {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    border: 1px solid;
+    border-radius: 50%;
+    border-color:rgb(255, 255, 255)
+}
+
+.orbit2 {
+    width: 900px;
+    height: 900px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    border: 1px solid;
+    border-radius: 50%;
+    border-color:rgb(255, 255, 255)
+}
+
+.orbit3 {
+    width: 1300px;
+    height: 1300px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    border: 1px solid;
+    border-radius: 50%;
+    border-color:rgb(255, 255, 255)
+}
+
+.orbit4 {
+    width: 1700px;
+    height: 1700px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    border: 1px solid;
+    border-radius: 50%;
+    border-color:rgb(255, 255, 255)
+}
+.orbit5 {
+    width: 2200px;
+    height: 2200px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    border: 1px solid;
+    border-radius: 50%;
+    border-color:rgb(255, 255, 255)
+}
+
+.spinner {
+    width:300px;
+    height:250px;
     display: flex;
-    flex-wrap: wrap;
-    flex: 1;
     justify-content: center;
-    border-bottom: 8px solid rgb(0, 0, 0);
-    height: 200px
-  }
-  
-  nav {
-    float: right;
-    text-align: center;
-  }
-  ul {
-    color: black;
-    font-size: 23px;
-    display: inline-block;
-  }
-  li {
-    display: inline-block;
-  }
-  a {
-    text-decoration: none;
-    color: black;
-    font-style:initial;
-  }
-#logo {
-  overflow-x: hidden;
-  display: inline-block;
-  margin: 15px;
-  float: none;
-  height: 100px;
-  width: 100px;
+    align-items: center;
+    background-color: transparent;
+}
 
+@keyframes spin {
+    0%{transform: rotate(0) translate(250px);}
+    100%{transform: rotate(360deg) translate(250px);}
+}
+@keyframes spin2 {
+    0%{transform: rotate(0) translate(450px);}
+    100%{transform: rotate(360deg) translate(450px);}
+}
+@keyframes spin3 {
+    0%{transform: rotate(0) translate(690px);}
+    100%{transform: rotate(360deg) translate(690px);}
+}
+@keyframes spin4 {
+    0%{transform: rotate(0) translate(850px);}
+    100%{transform: rotate(360deg) translate(850px);}
+}
+@keyframes spin5 {
+    0%{transform: rotate(0) translate(1100px);}
+    100%{transform: rotate(360deg) translate(1100px);}
+}
+@keyframes spin_moon {
+    0%{transform: rotate(0) translate(50px);}
+    100%{transform: rotate(360deg) translate(50px);}
 }
