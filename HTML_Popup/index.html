@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css" class="css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Button Popup Example</title>
+    
+  </head>
+  <body>
+    <button id="button" onclick="openPopup()">Click Me!</button>
+    <div id="popup">
+      <button id="close" onclick="closePopup()">Close</button>
+      <h1>Oops...</h1>
+      <p>Something went wrong. Please return back.</p>
+    </div>
+    <div id="blur"></div>
+    <script>
+      function openPopup() {
+
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("blur").style.display = "block";
+      }
+      
+      function closePopup() {
+
+        document.getElementById("popup").style.display = "none";
+        document.getElementById("blur").style.display = "none";
+      }
+      
+
+      window.onclick = function(event) {
+        var popup = document.getElementById("popup");
+        var blur = document.getElementById("blur");
+        if (event.target == popup) {
+          closePopup();
+        }
+      }
+    </script>
+  </body>
+</html>
