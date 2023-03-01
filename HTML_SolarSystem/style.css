@@ -1,0 +1,211 @@
+.sun {
+    max-width: 300px;
+    max-height: 300px;
+    display: block;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+}
+
+.mercury {
+    max-width: 70px;
+    max-height: 70px;
+    display: block;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    animation: spin 15s infinite linear;
+}
+
+.venus {
+    max-width: 100px;
+    max-height: 100px;
+    display: block;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    animation: spin2 13s infinite linear;
+}
+
+.earth {
+    max-width: 250px;
+    max-height: 250px;
+    display: block;
+    width: 50%;
+}
+
+.moon {
+    max-width: 40px;
+    max-height: 40px;
+    display: block;
+    width: 50%;
+    animation: spin_moon  12s infinite linear;
+}
+
+.earthmoon {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: fit-content;
+    height: fit-content;
+    animation: spin3  12s infinite linear;
+}
+
+.mars {
+    max-width: 60px;
+    max-height: 60px;
+    display: block;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    animation: spin4  9s infinite linear;
+}
+
+.jupiter {
+    max-width: 350px;
+    max-height: 350px;
+    display: block;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    animation: spin5  8s infinite linear;
+}
+
+.circle {
+    border: 1px rgb(0, 0, 0) solid;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+  }
+
+.orbit1 {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    border: 1px solid;
+    border-radius: 50%;
+    border-color:rgb(255, 255, 255)
+}
+
+.orbit2 {
+    width: 900px;
+    height: 900px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    border: 1px solid;
+    border-radius: 50%;
+    border-color:rgb(255, 255, 255)
+}
+
+.orbit3 {
+    width: 1300px;
+    height: 1300px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    border: 1px solid;
+    border-radius: 50%;
+    border-color:rgb(255, 255, 255)
+}
+
+.orbit4 {
+    width: 1700px;
+    height: 1700px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    border: 1px solid;
+    border-radius: 50%;
+    border-color:rgb(255, 255, 255)
+}
+.orbit5 {
+    width: 2200px;
+    height: 2200px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    border: 1px solid;
+    border-radius: 50%;
+    border-color:rgb(255, 255, 255)
+}
+
+.spinner {
+    width:300px;
+    height:250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+@keyframes spin {
+    0%{transform: rotate(0) translate(250px);}
+    100%{transform: rotate(360deg) translate(250px);}
+}
+@keyframes spin2 {
+    0%{transform: rotate(0) translate(450px);}
+    100%{transform: rotate(360deg) translate(450px);}
+}
+@keyframes spin3 {
+    0%{transform: rotate(0) translate(690px);}
+    100%{transform: rotate(360deg) translate(690px);}
+}
+@keyframes spin4 {
+    0%{transform: rotate(0) translate(850px);}
+    100%{transform: rotate(360deg) translate(850px);}
+}
+@keyframes spin5 {
+    0%{transform: rotate(0) translate(1100px);}
+    100%{transform: rotate(360deg) translate(1100px);}
+}
+@keyframes spin_moon {
+    0%{transform: rotate(0) translate(50px);}
+    100%{transform: rotate(360deg) translate(50px);}
+}
