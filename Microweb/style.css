@@ -1,0 +1,26 @@
+.mainbg {
+    background-image: url(vodnifoun5.webp);
+        overflow: hidden;
+}
+.header {
+    text-align: center;
+    font-size: x-large;
+    background-color: rgb(255, 0, 0);
+    margin-left: 200px;
+    size: 50px;
+    border-radius: 30px;
+    width: 700px;
+}
+
+.container {
+    margin-left: 300px;
+    background-image: url(vodnifoun5.jpg)
+}
+
+.row {
+    margin: 100px;
+}
+
+.logo {
+margin-left: 830px;
+}
