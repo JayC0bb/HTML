@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Object Rotation</title>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+
+    <script>
+        window.onload = function() {
+            var scene = new THREE.Scene();
+            var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            var renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+
+            var colors = [0xff0000, 0x00ff00, 0x0000ff, 0xffff00, 0xff00ff, 0x00ffff];
+
+            var materials = colors.map(color => new THREE.MeshBasicMaterial({ color: color }));
+
+            var geometry = new THREE.BoxGeometry();
+            var cube = new THREE.Mesh(geometry, materials);
+            scene.add(cube);
+
+            camera.position.z = 5;
+
+            var controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.25;
+            controls.screenSpacePanning = false;
+            controls.maxPolarAngle = Math.PI / 2;
+
+            var isLeftMouseDown = false;
+
+            var mouseX = 0;
+            var mouseY = 0;
+
+            document.addEventListener('mousedown', function(event) {
+                if (event.button === 0) {
+                    isLeftMouseDown = true;
+                    mouseX = event.clientX;
+                    mouseY = event.clientY;
+                }
+            });
+
+            document.addEventListener('mouseup', function(event) {
+                if (event.button === 0) {
+                    isLeftMouseDown = false;
+                }
+            });
+
+            document.addEventListener('mousemove', function(event) {
+                if (isLeftMouseDown) {
+                    var deltaX = event.clientX - mouseX;
+                    var deltaY = event.clientY - mouseY;
+
+                    cube.rotation.y += deltaX * 0.01;
+                    cube.rotation.x += deltaY * 0.01;
+
+                    mouseX = event.clientX;
+                    mouseY = event.clientY;
+                }
+            });
+
+            function animate() {
+                requestAnimationFrame(animate);
+                controls.update();
+                renderer.render(scene, camera);
+            }
+            animate();
+        };
+    </script>
+</body>
+</html>
